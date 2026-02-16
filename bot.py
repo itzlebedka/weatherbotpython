@@ -1,7 +1,9 @@
 import requests
 import telebot
+import os 
 
-bot = telebot.TeleBot("8266527044:AAE6dRzo57RFxymctzanzqlnop3CdU2SeUg")
+TOKEN = os.environ.get('8266527044:AAE6dRzo57RFxymctzanzqlnop3CdU2SeUg')
+bot = telebot.TeleBot(TOKEN)
 
 def get_weather(city):
     cities = {"питер": (59.94, 30.31), "москва": (55.75, 37.62)}
