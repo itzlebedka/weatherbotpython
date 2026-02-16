@@ -2,7 +2,7 @@ import requests
 import telebot
 import os 
 
-TOKEN = os.environ.get('8266527044:AAE6dRzo57RFxymctzanzqlnop3CdU2SeUg')
+TOKEN = os.environ.get('BOT_TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 def get_weather(city):
@@ -33,3 +33,4 @@ def weather(message):
     bot.send_message(message.chat.id, reply)
 
 bot.polling()
+
